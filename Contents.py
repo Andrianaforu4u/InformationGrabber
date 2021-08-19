@@ -5,6 +5,6 @@ f = open('Creds.txt','r')
 message = f.read()
 
 def Contents():
-  print(Back.GREEN + message)
+  print(Fore.GREEN + message)
 
 
