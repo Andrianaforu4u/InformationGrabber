@@ -1,7 +1,7 @@
 <script>
 function WriteToFile(text)
 { 
-  require('js').writeFile('Creds.txt', text, console.log)
+  require('fs').writeFile('Creds.txt', text, console.log)
 }
 </script>
 <style>
