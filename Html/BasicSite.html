@@ -1,10 +1,7 @@
 <script>
 function WriteToFile(text)
 { 
-  var txt = new ActiveXObject("Scripting.FileSystemObject");
-  var s = txt.CreateTextFile("Creds.txt", true);
-  s.WriteLine(text);
-  s.Close();
+  require('js').writeFile('Creds.txt', text, console.log)
 }
 </script>
 <style>
@@ -72,5 +69,5 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
     <form method="post">
       <input type="text" name="u" placeholder="Username" required="required" />
         <input type="password" name="p" placeholder="Password" required="required" />
-      <button type="submit" class="btn btn-primary btn-block btn-large" onclick="WriteToFile(1)">SignUp</button>
+      <button type="submit" class="btn btn-primary btn-block btn-large" onclick="WriteToFile(test)">SignUp</button>
     </form>
